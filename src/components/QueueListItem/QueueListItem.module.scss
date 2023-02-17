@@ -1,0 +1,20 @@
+@use "../../assets/scss/variables" as *;
+
+.QueueListItem {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  color: $light-blue;
+
+  h4,
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    color: $light-blue;
+    letter-spacing: $letter-spacing-600;
+  }
+
+  h4 {
+    color: $dark-blue;
+  }
+}

@@ -1,0 +1,23 @@
+@use "../../assets/scss/variables" as *;
+
+.QueueList {
+  width: 15rem;
+  height: 15rem;
+  padding: 1rem;
+  border: 2px solid #61dafb;
+  border-radius: 8px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+
+  @media (min-width: $breakpoint-lg) {
+    width: 15vw;
+    height: 26vw;
+  }
+
+  @media (min-width: 1400px) {
+    height: 26vw;
+  }
+}
+.QueueList::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,44 @@
+.slider {
+  width: 95%;
+  padding: 0 1rem 0 1rem;
+}
+
+.slick-slide {
+  // width: 20rem !important;
+}
+
+.slick-list {
+  padding: 0 1rem;
+}
+
+.slick-dots {
+  bottom: 5px !important;
+  display: none !important;
+}
+
+.slick-slides-to .slick-prev {
+  // left: -1% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: -4% !important;
+  z-index: 1;
+}
+
+@media (min-width: 1500px) {
+  .slick-next {
+    right: -2% !important;
+  }
+}
+
+@media (min-width: 1700px) {
+  .slick-next {
+    right: -2% !important;
+  }
+}
+
+@media (min-width: 1800px) {
+  .slick-next {
+    right: -1% !important;
+  }
+}

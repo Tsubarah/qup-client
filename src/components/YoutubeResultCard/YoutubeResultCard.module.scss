@@ -1,0 +1,41 @@
+@use "../../assets/scss/variables" as *;
+
+.root {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+
+  h4,
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    color: $light-blue;
+    letter-spacing: $letter-spacing-600;
+  }
+
+  h4 {
+    color: $dark-blue;
+  }
+
+  &__description {
+    width: 22rem;
+    padding: 0 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    &__description {
+      width: 20rem;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    &__description {
+      width: 22rem;
+    }
+  }
+}

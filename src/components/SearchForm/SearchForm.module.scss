@@ -1,0 +1,27 @@
+@use "../../assets/scss/variables" as *;
+
+.root {
+  display: flex;
+  justify-content: center;
+
+  &__input {
+    height: 2.2rem;
+    width: 20rem;
+    font-size: inherit;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    outline-width: 0;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    margin-left: 2rem;
+
+    &__input {
+      width: 15rem;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    margin-right: 2rem;
+  }
+}

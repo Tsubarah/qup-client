@@ -1,0 +1,22 @@
+@use "../../assets/scss/variables" as *;
+
+.root {
+  &__lyrics {
+    height: 30vw;
+    font-size: 1.5rem;
+    color: $faded-blue;
+    text-align: center;
+    white-space: pre;
+    overflow-y: scroll;
+  }
+
+  &__loader {
+    height: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // &__lyrics::-webkit-scrollbar {
+  //   display: none;
+  // }
+}

@@ -1,0 +1,23 @@
+@use "../../assets/scss/variables" as *;
+
+.root {
+  &__controllerContainer {
+    display: flex;
+  }
+
+  &__logo img {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    width: 6rem;
+  }
+
+  &__spotifyController {
+    display: none;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    &__logo img {
+      display: none;
+    }
+  }
+}

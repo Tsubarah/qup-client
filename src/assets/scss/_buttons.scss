@@ -1,0 +1,112 @@
+.button-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.button {
+  padding: 0.5rem 1.5rem;
+  font-size: $font-size-75;
+  color: $light-blue;
+  background-color: $light-grey;
+  border: 2px solid $faded-blue;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  outline-width: 0;
+  white-space: nowrap;
+}
+
+.login-buttons-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.login-button {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: $font-size-300;
+}
+
+.button:hover {
+  background-color: $dark-grey;
+  transform: scale(1.05);
+}
+
+.queue-up-button:hover {
+  background-color: $dark-grey;
+  transform: scale(1.05);
+}
+
+.queue-up-button,
+.instructions-button {
+  height: 2rem;
+  font-size: $font-size-75;
+  color: $light-blue;
+  background-color: $light-grey;
+  border: 2px solid $dark-blue;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+}
+
+.button,
+.instructions-button,
+.queue-up-button,
+.remove-item-button,
+.play-button,
+.next-button,
+.prev-button,
+.search-button,
+.close-modal-button:hover {
+  cursor: pointer;
+}
+
+.remove-item-button {
+  height: 2rem;
+  border-radius: 25px;
+  background-color: $light-grey;
+}
+
+.close-modal-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.close-modal-button {
+  padding: 0.5rem 1.5rem;
+  font-size: $font-size-75;
+  color: $light-blue;
+  background-color: $light-grey;
+  border: 2px solid $light-blue;
+  border-radius: 0.5rem;
+}
+
+.search-button {
+  width: 2.5rem;
+  height: 2.2rem;
+  color: #61dafb;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #42464f;
+}
+
+.play-button,
+.next-button,
+.prev-button {
+  background-color: $grey;
+  color: $light-blue;
+  border: none;
+}
+
+@media (min-width: $breakpoint-lg) {
+  .queue-button {
+    display: none;
+  }
+  .button-container {
+    padding: 0;
+  }
+}

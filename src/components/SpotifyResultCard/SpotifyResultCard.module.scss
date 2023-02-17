@@ -1,0 +1,43 @@
+@use "../../assets/scss/variables" as *;
+
+.SpotifyCard {
+  margin-bottom: 2rem;
+  h4,
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    color: $light-blue;
+    letter-spacing: $letter-spacing-600;
+  }
+
+  h4 {
+    color: $dark-blue;
+  }
+
+  &__image {
+    object-fit: cover;
+    height: 12rem;
+    width: 18rem;
+  }
+
+  &__description {
+    width: 18rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    margin-bottom: 0;
+
+    &__description {
+      width: 15rem;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    &__description {
+      width: 18rem;
+    }
+  }
+}
