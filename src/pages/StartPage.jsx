@@ -61,7 +61,7 @@ const StartPage = ({
           handleFilterPlatform={handleFilterPlatform}
         />
       </div>
-      <div className="playerController">
+      {/* <div className="playerController">
         <PlayerController
           socket={socket}
           host={host}
@@ -70,7 +70,7 @@ const StartPage = ({
           setPlaying={setPlaying}
           playingTrack={playingTrack}
         />
-      </div>
+      </div> */}
     </>
   )
 }

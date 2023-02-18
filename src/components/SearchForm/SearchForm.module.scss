@@ -3,18 +3,43 @@
 .root {
   display: flex;
   justify-content: center;
+  margin-left: 2rem;
 
   &__input {
     height: 2.2rem;
     width: 20rem;
+    padding-left: 1rem;
     font-size: inherit;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    color: #ffffffa6;
+    background-color: #282c34;
+    border: 1px solid #42464f;
+    border-bottom-left-radius: 9999px;
+    border-top-left-radius: 9999px;
     outline-width: 0;
   }
 
+  /* clears the ‘X’ from Internet Explorer */
+  input[type="search"]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  input[type="search"]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  /* clears the ‘X’ from Chrome */
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+
   @media (min-width: $breakpoint-lg) {
-    margin-left: 2rem;
+    // margin-left: 2rem;
+    margin-right: 2rem;
 
     &__input {
       width: 15rem;
@@ -22,6 +47,5 @@
   }
 
   @media (min-width: 1600px) {
-    margin-right: 2rem;
   }
 }

@@ -86,20 +86,33 @@
 }
 
 .search-button {
-  width: 2.5rem;
+  width: 3.5rem;
   height: 2.2rem;
-  color: #61dafb;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  color: white;
   background-color: #42464f;
+  border: 1px solid transparent;
+  border-left: none;
+  border-bottom-right-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.search-button:hover {
+  background-color: $dark-grey;
 }
 
 .play-button,
 .next-button,
 .prev-button {
-  background-color: $grey;
+  padding: 0 2px;
+  background-color: black;
   color: $light-blue;
   border: none;
+}
+
+.play-button:hover,
+.next-button:hover,
+.prev-button:hover {
+  transform: scale(1.25);
 }
 
 @media (min-width: $breakpoint-lg) {
@@ -108,5 +121,10 @@
   }
   .button-container {
     padding: 0;
+  }
+  .play-button,
+  .next-button,
+  .prev-button {
+    background-color: $grey;
   }
 }

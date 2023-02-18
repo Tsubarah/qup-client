@@ -1,6 +1,7 @@
 .root {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 
   &__search {
     margin-bottom: 2rem;

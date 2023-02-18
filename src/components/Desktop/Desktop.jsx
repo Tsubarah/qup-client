@@ -7,6 +7,7 @@ import MediaSlider from "../Slider/MediaSlider"
 import styles from "./Desktop.module.scss"
 import DropdownButton from "../TopButtons"
 import DesktopLogo from "../../assets/images/Logo_Q-up_1.png"
+import PlayerController from "../PlayerController/PlayerController"
 
 const Desktop = ({
   socket,
@@ -52,16 +53,24 @@ const Desktop = ({
                 </div> */}
                 <div className={styles.Desktop__searchTopContainer}>
                   <div className={styles.Desktop__searchTop}>
-                    <div>
+                    <div className={styles.Desktop__searchForm}>
                       <SearchForm socket={socket} host={host} />
+                      <div className={styles.Desktop__dropdown}>
+                        <DropdownButton
+                          platForm={platForm}
+                          handleFilterPlatform={handleFilterPlatform}
+                          showModal={showModal}
+                        />
+                      </div>
                     </div>
-                    <div>
-                      <DropdownButton
-                        platForm={platForm}
-                        handleFilterPlatform={handleFilterPlatform}
-                        showModal={showModal}
-                      />
-                    </div>
+                    <PlayerController
+                      socket={socket}
+                      host={host}
+                      playing={playing}
+                      queueList={queueList}
+                      setPlaying={setPlaying}
+                      playingTrack={playingTrack}
+                    />
                   </div>
                   <div className={styles.Desktop__resultList}>
                     <MediaSlider

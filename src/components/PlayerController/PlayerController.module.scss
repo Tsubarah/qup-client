@@ -2,7 +2,20 @@
 
 .root {
   &__controllerContainer {
+    position: absolute;
+    bottom: 0;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: black;
+  }
+
+  &__controllers {
+    display: flex;
+    align-items: center;
+    background-color: black;
   }
 
   &__logo img {
@@ -16,8 +29,22 @@
   }
 
   @media (min-width: $breakpoint-lg) {
+    margin-left: 5rem;
+    &__controllerContainer {
+      position: relative;
+      padding: 0;
+      background-color: transparent;
+    }
+    &__controllers {
+      background-color: $grey;
+      // margin: 0 auto;
+    }
     &__logo img {
       display: none;
     }
+  }
+
+  @media (min-width: 1400px) {
+    margin-left: 10rem;
   }
 }

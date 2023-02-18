@@ -3,6 +3,7 @@ import SearchForm from "../SearchForm"
 import ResultList from "../ResultList"
 import styles from "./Mobile.module.scss"
 import DropdownButton from "../TopButtons"
+import PlayerController from "../PlayerController/PlayerController"
 
 const Mobile = ({
   socket,
@@ -12,6 +13,9 @@ const Mobile = ({
   setShowModal,
   platForm,
   handleFilterPlatform,
+  playing,
+  setPlaying,
+  playingTrack,
 }) => {
   return (
     <>
@@ -39,6 +43,16 @@ const Mobile = ({
         </div>
         <div className={styles.root__resultList}>
           <ResultList socket={socket} host={host} platForm={platForm} />
+        </div>
+        <div>
+          <PlayerController
+            socket={socket}
+            host={host}
+            playing={playing}
+            queueList={queueList}
+            setPlaying={setPlaying}
+            playingTrack={playingTrack}
+          />
         </div>
       </div>
     </>

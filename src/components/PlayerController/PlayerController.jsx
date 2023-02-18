@@ -26,15 +26,15 @@ const PlayerController = ({
 
   const windowSize = useWindowSize()
 
-  useEffect(() => {
-    if (windowSize.width > 1000 && windowSize.width < 1600) {
-      setPlaySize(40)
-      setNextSize(30)
-    } else {
-      setPlaySize(50)
-      setNextSize(40)
-    }
-  }, [windowSize])
+  // useEffect(() => {
+  //   if (windowSize.width > 1000 && windowSize.width < 1600) {
+  //     setPlaySize(40)
+  //     setNextSize(30)
+  //   } else {
+  //     setPlaySize(50)
+  //     setNextSize(50)
+  //   }
+  // }, [windowSize])
 
   // Callback function for SpotifyPlayer
   const handleStateChange = (state) => {
@@ -91,14 +91,14 @@ const PlayerController = ({
       <div className={styles.root}>
         <div className={styles.root__controllerContainer}>
           {owner && (
-            <div>
+            <div className={styles.root__controllers}>
               <button
                 className="prev-button"
                 onClick={() => {
                   // socket.emit("prevPlay", { host, playing})
                 }}
               >
-                <GiPreviousButton size={nextSize} />
+                <GiPreviousButton size={40} />
               </button>
               <button
                 className="play-button"
@@ -107,13 +107,13 @@ const PlayerController = ({
                 }}
               >
                 {playing ? (
-                  <MdPauseCircleOutline size={playSize} />
+                  <MdPauseCircleOutline size={50} />
                 ) : (
-                  <BiPlayCircle size={playSize} />
+                  <BiPlayCircle size={50} />
                 )}
               </button>
               <button className="next-button" onClick={() => handleNext()}>
-                <GiNextButton size={nextSize} />
+                <GiNextButton size={40} />
               </button>
             </div>
           )}
