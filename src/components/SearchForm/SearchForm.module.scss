@@ -3,7 +3,6 @@
 .root {
   display: flex;
   justify-content: center;
-  margin-left: 2rem;
 
   &__input {
     height: 2.2rem;
@@ -38,7 +37,7 @@
   }
 
   @media (min-width: $breakpoint-lg) {
-    // margin-left: 2rem;
+    margin-left: 2rem;
     margin-right: 2rem;
 
     &__input {
