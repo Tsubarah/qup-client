@@ -49,7 +49,6 @@ const Mobile = ({
           playingTrack={playingTrack}
           playing={playing}
           setPlaying={setPlaying}
-          muted={true}
         />
       </div>
       <div className={styles.root__resultList}>

@@ -7,7 +7,7 @@ import RingLoader from "react-spinners/RingLoader"
 import useAuth from "../../hooks/useAuth"
 import { useWindowSize } from "../../hooks/useWindowSize"
 
-const Video = ({ socket, host, queueList, playingTrack, playing, muted }) => {
+const Video = ({ socket, host, queueList, playingTrack, playing }) => {
   const [loading, setLoading] = useState(true)
   const [playingId, setPlayingId] = useState("gFQ01Fs952o")
   const [lyrics, setLyrics] = useState("")
@@ -70,7 +70,7 @@ const Video = ({ socket, host, queueList, playingTrack, playing, muted }) => {
               ref={videoRef}
               url={`https://www.youtube.com/watch?v=${playingId}`}
               playing={playing}
-              muted={user.owner && muted ? false : true}
+              muted={user.owner ? false : true}
               controls={user.owner ? true : false}
               onReady={() => setLoading(false)}
               // onProgress={(progress) => {
@@ -86,7 +86,7 @@ const Video = ({ socket, host, queueList, playingTrack, playing, muted }) => {
             />
           </div>
         )}
-        {playingTrack?.player === "spotify" && (
+        {playingTrack?.player === "spotify" && windowSize.width > 800 && (
           <div className={styles.root__lyrics}>{lyrics}</div>
         )}
       </div>
