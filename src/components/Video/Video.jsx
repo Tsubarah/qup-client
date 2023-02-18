@@ -5,15 +5,29 @@ import { onEndedPlaying } from "../../helpers"
 import axios from "axios"
 import RingLoader from "react-spinners/RingLoader"
 import useAuth from "../../hooks/useAuth"
+import { useWindowSize } from "../../hooks/useWindowSize"
 
-const Video = ({ socket, host, queueList, playingTrack, playing }) => {
+const Video = ({ socket, host, queueList, playingTrack, playing, muted }) => {
   const [loading, setLoading] = useState(true)
   const [playingId, setPlayingId] = useState("gFQ01Fs952o")
   const [lyrics, setLyrics] = useState("")
+  const [mediaHeight, setMediaHeight] = useState("28vw")
   // const [progress, setProgress] = useState(0)
   // const [duration, setDuration] = useState(0)
   const videoRef = useRef()
   const { user } = useAuth()
+
+  const windowSize = useWindowSize()
+
+  useEffect(() => {
+    if (windowSize.width < 500) {
+      setMediaHeight("50vw")
+    } else if (windowSize.width > 500) {
+      setMediaHeight("30vw")
+    } else {
+      setMediaHeight("28vw")
+    }
+  }, [windowSize])
 
   useEffect(() => {
     if (!playingTrack) {
@@ -51,12 +65,12 @@ const Video = ({ socket, host, queueList, playingTrack, playing }) => {
           <div style={{ display: loading ? "none" : "unset" }}>
             <ReactPlayer
               width="100%"
-              height="28vw"
+              height={mediaHeight}
               origin="https://www.youtube.com"
               ref={videoRef}
               url={`https://www.youtube.com/watch?v=${playingId}`}
               playing={playing}
-              muted={user.owner ? false : true}
+              muted={user.owner && muted ? false : true}
               controls={user.owner ? true : false}
               onReady={() => setLoading(false)}
               // onProgress={(progress) => {

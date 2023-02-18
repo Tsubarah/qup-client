@@ -4,6 +4,7 @@ import ResultList from "../ResultList"
 import styles from "./Mobile.module.scss"
 import DropdownButton from "../TopButtons"
 import PlayerController from "../PlayerController/PlayerController"
+import Video from "../Video/Video"
 
 const Mobile = ({
   socket,
@@ -41,19 +42,28 @@ const Mobile = ({
         <div className={styles.root__search}>
           <SearchForm socket={socket} host={host} />
         </div>
-        <div className={styles.root__resultList}>
-          <ResultList socket={socket} host={host} platForm={platForm} />
-        </div>
-        <div>
-          <PlayerController
-            socket={socket}
-            host={host}
-            playing={playing}
-            queueList={queueList}
-            setPlaying={setPlaying}
-            playingTrack={playingTrack}
-          />
-        </div>
+        <Video
+          socket={socket}
+          host={host}
+          queueList={queueList}
+          playingTrack={playingTrack}
+          playing={playing}
+          setPlaying={setPlaying}
+          muted={true}
+        />
+      </div>
+      <div className={styles.root__resultList}>
+        <ResultList socket={socket} host={host} platForm={platForm} />
+      </div>
+      <div className={styles.Mobile__video}>
+        <PlayerController
+          socket={socket}
+          host={host}
+          playing={playing}
+          queueList={queueList}
+          setPlaying={setPlaying}
+          playingTrack={playingTrack}
+        />
       </div>
     </>
   )

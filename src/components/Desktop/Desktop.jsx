@@ -38,6 +38,8 @@ const Desktop = ({
               playingTrack={playingTrack}
               playing={playing}
               setPlaying={setPlaying}
+              muted={false}
+              arria-current="visible"
             />
           </div>
         </div>

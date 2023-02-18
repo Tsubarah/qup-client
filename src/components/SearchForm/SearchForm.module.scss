@@ -17,6 +17,10 @@
     outline-width: 0;
   }
 
+  &__input:focus {
+    outline: none !important;
+  }
+
   /* clears the ‘X’ from Internet Explorer */
   input[type="search"]::-ms-clear {
     display: none;
