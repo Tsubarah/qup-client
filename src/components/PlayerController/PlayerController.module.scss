@@ -2,17 +2,20 @@
 
 .root {
   &__controllerContainer {
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 1rem;
     position: absolute;
     bottom: 0;
     display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    padding: 1rem 0;
     background-color: black;
   }
 
   &__controllers {
+    margin-top: 0.5rem;
     display: flex;
     align-items: center;
     background-color: black;
@@ -29,7 +32,7 @@
   }
 
   @media (min-width: $breakpoint-lg) {
-    margin-left: 5rem;
+    // margin-left: 5rem;
     &__controllerContainer {
       position: relative;
       padding: 0;
@@ -44,7 +47,7 @@
     }
   }
 
-  @media (min-width: 1400px) {
-    margin-left: 10rem;
-  }
+  // @media (min-width: 1400px) {
+  //   margin-left: 10rem;
+  // }
 }

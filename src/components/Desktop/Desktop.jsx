@@ -48,6 +48,14 @@ const Desktop = ({
             <>
               <div className={styles.Desktop__qr}>
                 <QrCode host={host} />
+                <PlayerController
+                  socket={socket}
+                  host={host}
+                  playing={playing}
+                  queueList={queueList}
+                  setPlaying={setPlaying}
+                  playingTrack={playingTrack}
+                />
               </div>
               <div className={styles.Desktop__bottomRightContainer}>
                 {/* <div>
@@ -65,14 +73,6 @@ const Desktop = ({
                         />
                       </div>
                     </div>
-                    <PlayerController
-                      socket={socket}
-                      host={host}
-                      playing={playing}
-                      queueList={queueList}
-                      setPlaying={setPlaying}
-                      playingTrack={playingTrack}
-                    />
                   </div>
                   <div className={styles.Desktop__resultList}>
                     <MediaSlider

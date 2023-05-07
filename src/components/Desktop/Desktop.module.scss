@@ -15,7 +15,7 @@
   }
 
   &__queuelist {
-    display: flex;
+    margin: auto;
   }
 
   &__video {
@@ -29,15 +29,16 @@
   }
 
   &__qr {
-    margin-top: 5rem;
     margin-left: 5rem;
-    width: 20vw;
+    width: 30vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   &__bottomRightContainer {
-    width: 71vw;
+    width: 70vw;
     display: flex;
     justify-content: space-between;
   }
@@ -71,9 +72,9 @@
       margin-left: 1rem;
     }
 
-    &__qr {
-      margin-left: 7rem;
-    }
+    // &__qr {
+    //   margin-left: 7rem;
+    // }
   }
 
   @media (min-width: 1600px) {
