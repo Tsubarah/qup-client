@@ -121,7 +121,7 @@ function App() {
 
   return (
     <div className="App">
-      {loading && <LoadingSpinner />}
+      {/* {loading && <LoadingSpinner />} */}
 
       <Routes>
         {!signedIn ? (
