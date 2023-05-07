@@ -20,11 +20,11 @@ const Video = ({ socket, host, queueList, playingTrack, playing, muted }) => {
   const windowSize = useWindowSize()
 
   useEffect(() => {
-    if (windowSize.width < 500) {
+    if (windowSize.width < 800) {
       setMediaHeight("50vw")
-    } else if (windowSize.width > 500) {
-      setMediaHeight("30vw")
-    } else {
+    }
+
+    if (windowSize.width > 800) {
       setMediaHeight("28vw")
     }
   }, [windowSize])

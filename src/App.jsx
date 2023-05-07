@@ -45,7 +45,7 @@ function App() {
         expiresIn: expiresIn,
       })
     }
-  }, [])
+  }, [accessToken])
 
   useEffect(() => {
     console.log("user", user)
@@ -121,7 +121,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* {loading && <LoadingSpinner />} */}
+      {loading && <LoadingSpinner />}
 
       <Routes>
         {!signedIn ? (
