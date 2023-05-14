@@ -14,7 +14,7 @@ const QueueModal = ({ socket, queueList, setShowModal, host }) => {
           </button>
         </div>
         <div className="modal-header">
-          <h2 className="modal-title">Queue List</h2>
+          <h2 className="modal-title">Queue</h2>
         </div>
         {queueList.length > 0 && (
           <div className="modal-body">
