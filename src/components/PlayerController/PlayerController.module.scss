@@ -4,7 +4,7 @@
   &__controllerContainer {
     width: 100%;
     padding: 1rem 0;
-    margin-top: 1rem;
+    margin-top: 2rem;
     position: absolute;
     bottom: 0;
     display: flex;
@@ -32,7 +32,6 @@
   }
 
   @media (min-width: $breakpoint-lg) {
-    // margin-left: 5rem;
     &__controllerContainer {
       position: relative;
       padding: 0;
@@ -40,14 +39,9 @@
     }
     &__controllers {
       background-color: $grey;
-      // margin: 0 auto;
     }
     &__logo img {
       display: none;
     }
   }
-
-  // @media (min-width: 1400px) {
-  //   margin-left: 10rem;
-  // }
 }

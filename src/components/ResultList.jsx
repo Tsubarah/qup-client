@@ -13,7 +13,6 @@ const ResultList = ({ socket, host, platForm }) => {
 
     socket.on("spotifySearch", (data) => {
       setSpotifyResult(data)
-      // console.log("data", data)
     })
   }, [youtubeResult, spotifyResult])
 
