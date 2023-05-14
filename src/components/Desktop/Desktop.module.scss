@@ -7,7 +7,7 @@
   &__top {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 
   &__logo img {
@@ -15,21 +15,20 @@
   }
 
   &__queuelist {
-    margin: auto;
+    // margin: auto;
   }
 
   &__video {
     width: 70%;
+    margin-left: auto;
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
-    margin-left: 1rem;
   }
 
   &__qr {
-    margin-left: 5rem;
     width: 30vw;
     display: flex;
     flex-direction: column;
@@ -68,9 +67,9 @@
   }
 
   @media (min-width: 1300px) {
-    &__logo {
-      margin-left: 1rem;
-    }
+    // &__logo {
+    //   margin-left: 1rem;
+    // }
 
     // &__qr {
     //   margin-left: 7rem;
@@ -86,9 +85,9 @@
       margin-left: 2rem;
     }
 
-    &__qr {
-      margin-left: 8rem;
-    }
+    // &__qr {
+    //   margin-left: 8rem;
+    // }
 
     // &__searchTop {
     //   justify-content: flex-start;
@@ -96,9 +95,9 @@
   }
 
   @media (min-width: 1700px) {
-    &__qr {
-      margin-left: 9rem;
-    }
+    // &__qr {
+    //   margin-left: 9rem;
+    // }
 
     &__bottom {
       margin-top: 0;
