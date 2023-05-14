@@ -17,6 +17,7 @@
 
   @media (min-width: $breakpoint-md) {
     &__lyrics {
+      display: block;
       height: 28vw;
       font-size: 1.5rem;
       color: $faded-blue;
