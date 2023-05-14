@@ -23,7 +23,8 @@
   }
 
   &__controllers {
-    margin-top: 0.5rem;
+    margin: 0.5rem auto;
+    padding-right: 1rem;
     display: flex;
     align-items: center;
     background-color: black;
@@ -48,6 +49,7 @@
     }
     &__controllers {
       background-color: $grey;
+      padding-right: 0;
     }
     &__logo img {
       display: none;

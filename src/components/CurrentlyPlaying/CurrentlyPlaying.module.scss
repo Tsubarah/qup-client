@@ -4,9 +4,12 @@
   align-self: center;
 
   &__artist {
+    width: 80%;
     font-size: 1rem;
     color: $dark-blue;
     white-space: pre-wrap;
+    overflow-wrap: break-word;
+    margin: auto;
   }
 
   &__title {
@@ -17,6 +20,9 @@
   }
 
   @media (min-width: $breakpoint-lg) {
+    &__artist {
+      width: 100%;
+    }
     &__title {
       white-space: nowrap;
       word-wrap: break-word;
