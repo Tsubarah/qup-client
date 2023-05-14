@@ -2,12 +2,7 @@
 
 .root {
   &__lyrics {
-    height: 28vw;
-    font-size: 1.5rem;
-    color: $faded-blue;
-    text-align: center;
-    white-space: pre;
-    overflow-y: scroll;
+    display: none;
   }
 
   &__loader {
@@ -19,4 +14,15 @@
   // &__lyrics::-webkit-scrollbar {
   //   display: none;
   // }
+
+  @media (min-width: $breakpoint-md) {
+    &__lyrics {
+      height: 28vw;
+      font-size: 1.5rem;
+      color: $faded-blue;
+      text-align: center;
+      white-space: pre;
+      overflow-y: scroll;
+    }
+  }
 }

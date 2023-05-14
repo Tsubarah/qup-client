@@ -51,20 +51,6 @@ html {
   display: flex;
 }
 
-.playerController {
-  width: 100vw;
-  height: 4rem;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  left: 50%;
-  bottom: 0;
-  background-color: $grey;
-  transform: translate(-50%, 0%);
-  white-space: nowrap;
-}
-
 @media (min-width: $breakpoint-lg) {
   .loginWrapper {
     top: 40%;
@@ -76,17 +62,6 @@ html {
   .mobile {
     display: none;
   }
-
-  .playerController {
-    height: 2rem;
-    width: unset;
-    padding: 0;
-    position: absolute;
-    top: 31vw;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
-  }
 }
 
 @media (min-width: 1100px) {
@@ -97,11 +72,5 @@ html {
     .button-container {
       display: inline-block;
     }
-  }
-}
-
-@media (min-width: 1600px) {
-  .playerController {
-    top: 30vw;
   }
 }

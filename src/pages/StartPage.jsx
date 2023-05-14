@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import Desktop from "../components/Desktop/Desktop"
 import Mobile from "../components/Mobile/Mobile"
-import PlayerController from "../components/PlayerController/PlayerController"
 
 const StartPage = ({
   socket,
@@ -61,16 +60,6 @@ const StartPage = ({
           handleFilterPlatform={handleFilterPlatform}
         />
       </div>
-      {/* <div className="playerController">
-        <PlayerController
-          socket={socket}
-          host={host}
-          playing={playing}
-          queueList={queueList}
-          setPlaying={setPlaying}
-          playingTrack={playingTrack}
-        />
-      </div> */}
     </>
   )
 }
