@@ -23,8 +23,6 @@
   }
 
   &__controllers {
-    margin: 0.5rem auto;
-    padding-right: 1rem;
     display: flex;
     align-items: center;
     background-color: black;
@@ -49,8 +47,8 @@
       flex-direction: column-reverse;
     }
     &__controllers {
+      margin: 0.5rem auto;
       background-color: $grey;
-      padding-right: 0;
     }
     &__logo img {
       display: none;
