@@ -14,6 +14,14 @@
     background-color: black;
   }
 
+  &__playerWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+  }
+
   &__controllers {
     margin-top: 0.5rem;
     display: flex;
@@ -34,6 +42,9 @@
       position: relative;
       padding: 0;
       background-color: transparent;
+    }
+    &__playerWrapper {
+      flex-direction: column-reverse;
     }
     &__controllers {
       background-color: $grey;
