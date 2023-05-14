@@ -90,7 +90,7 @@ const PlayerController = ({
     <>
       <div className={styles.root}>
         <div className={styles.root__controllerContainer}>
-          <div styles={{ display: "flex" }}>
+          <div className={styles.root__playerWrapper}>
             {!owner && (
               <div className={styles.root__logo}>
                 <img src={Logo} alt="" />
