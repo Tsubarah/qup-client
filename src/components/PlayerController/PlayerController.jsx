@@ -90,39 +90,41 @@ const PlayerController = ({
     <>
       <div className={styles.root}>
         <div className={styles.root__controllerContainer}>
-          {owner && (
-            <div className={styles.root__controllers}>
-              <button
-                className="prev-button"
-                onClick={() => {
-                  // socket.emit("prevPlay", { host, playing})
-                }}
-              >
-                <GiPreviousButton size={40} />
-              </button>
-              <button
-                className="play-button"
-                onClick={() => {
-                  handlePlay()
-                }}
-              >
-                {playing ? (
-                  <MdPauseCircleOutline size={50} />
-                ) : (
-                  <BiPlayCircle size={50} />
-                )}
-              </button>
-              <button className="next-button" onClick={() => handleNext()}>
-                <GiNextButton size={40} />
-              </button>
-            </div>
-          )}
-          {!owner && (
-            <div className={styles.root__logo}>
-              <img src={Logo} alt="" />
-            </div>
-          )}
-          <CurrentlyPlaying playingTrack={playingTrack} />
+          <div styles={{ display: "flex" }}>
+            {!owner && (
+              <div className={styles.root__logo}>
+                <img src={Logo} alt="" />
+              </div>
+            )}
+            {owner && (
+              <div className={styles.root__controllers}>
+                <button
+                  className="prev-button"
+                  onClick={() => {
+                    // socket.emit("prevPlay", { host, playing})
+                  }}
+                >
+                  <GiPreviousButton size={40} />
+                </button>
+                <button
+                  className="play-button"
+                  onClick={() => {
+                    handlePlay()
+                  }}
+                >
+                  {playing ? (
+                    <MdPauseCircleOutline size={50} />
+                  ) : (
+                    <BiPlayCircle size={50} />
+                  )}
+                </button>
+                <button className="next-button" onClick={() => handleNext()}>
+                  <GiNextButton size={40} />
+                </button>
+              </div>
+            )}
+            <CurrentlyPlaying playingTrack={playingTrack} />
+          </div>
         </div>
       </div>
       <div className={styles.root__spotifyController}>
