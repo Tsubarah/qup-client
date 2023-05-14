@@ -41,7 +41,7 @@
   }
 
   &__searchTop {
-    margin: 1.25rem 0;
+    margin-top: 1rem;
   }
 
   &__searchTopContainer {
@@ -61,5 +61,6 @@
   &__resultList {
     display: flex;
     align-items: center;
+    margin-top: 1rem;
   }
 }
