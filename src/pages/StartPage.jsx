@@ -25,7 +25,6 @@ const StartPage = ({
 
   useEffect(() => {
     if (id !== socket.id) {
-      console.log("id", id)
       socket.emit("user:joined", id)
     }
   }, [id])

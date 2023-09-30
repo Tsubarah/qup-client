@@ -1,8 +1,6 @@
 import React, { useState, useContext, createContext } from "react"
 import { accessToken } from "../lib/spotify"
 
-console.log("accessToken", accessToken)
-
 const AuthContext = createContext({
   signedIn: false,
   spotifyAuthenticated: false,

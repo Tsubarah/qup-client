@@ -32,6 +32,22 @@ function App() {
   const sessionId = localStorage.getItem("session-id")
   const userId = localStorage.getItem("user-id")
 
+  if (owner) {
+    if ("wakeLock" in navigator) {
+      // Request a screen wake lock
+      navigator.wakeLock
+        .request("screen")
+        .then((wakeLock) => {
+          console.log("Screen wake lock acquired:", wakeLock)
+        })
+        .catch((error) => {
+          console.error("Error acquiring wake lock:", error)
+        })
+    } else {
+      console.warn("Wake Lock API is not supported in this browser.")
+    }
+  }
+
   useEffect(() => {
     if (accessToken) {
       socket.emit("host:joined")
@@ -57,11 +73,11 @@ function App() {
 
     if (pathname != "/" && !signedIn) {
       if (!sessionId || (sessionId && path !== userId)) {
-        console.log("1")
+        // console.log("1")
         signInVisitor()
       }
       if (path === userId) {
-        console.log("2")
+        // console.log("2")
         socket.emit("reconnect", { sessionId, userId })
       }
     }
@@ -74,7 +90,6 @@ function App() {
         event: "host joined",
         method,
       })
-      // console.log("user", user)
 
       const RECONNECT_METHODS = {
         HOST: "reconnect/host",
@@ -109,10 +124,19 @@ function App() {
 
     if (host === undefined) {
       socket.emit("disconnect")
+
+      navigator.wakeLock
+        .request("screen")
+        .then((wakeLock) => {
+          wakeLock.release()
+        })
+        .catch((error) => {
+          console.error("Error acquiring wake lock:", error)
+        })
     }
 
     return () => {
-      console.log("Cleaning up")
+      // console.log("Cleaning up")
       socket.off("host:joined")
       socket.off("disconnect")
       socket.off("playlist")
